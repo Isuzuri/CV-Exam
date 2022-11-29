@@ -1,0 +1,58 @@
+// Выделение активной страницы
+
+.home-title span {
+    opacity: 1;
+}
+
+.col1 a {
+    background-color: rgb(9,64,103);
+}
+
+// ===================================
+@mixin cube_size_pos ($width, $height, $top, $right) {
+    width: $width;
+    height: $height;
+    top: $top;
+    right: $right;
+}
+
+// ===================================
+main {
+    position: relative;
+    background-color: white;
+    height: 4000px;
+
+    .cubes {
+        > * {
+            position: absolute;
+            background-image: url(../../icons/cubic.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: cube_move 30s ease-in-out 0s infinite both;
+          }
+          
+          .cube_1 {
+            @include cube_size_pos(5rem, 5.75rem, 15rem, 15rem);
+          }
+            
+          .cube_2 {
+            @include cube_size_pos(8rem, 9.25rem, 15rem, 3rem);
+          }
+          
+          .cube_3 {
+            @include cube_size_pos(11rem, 13rem, 2.25rem, 7rem);
+          }
+        
+          @keyframes cube_move {
+            25% {
+              transform: translateY(3vh);
+            }
+                    
+            75% {
+              transform: translateY(-3vh);
+            }
+          }
+    }
+}
+  
+  
