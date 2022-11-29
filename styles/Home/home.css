@@ -1,0 +1,55 @@
+.home-title span {
+  opacity: 1;
+}
+
+.col1 a {
+  background-color: rgb(9, 64, 103);
+}
+
+main {
+  position: relative;
+  background-color: white;
+  height: 4000px;
+}
+main .cubes > * {
+  position: absolute;
+  background-image: url(../../icons/cubic.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation: cube_move 30s ease-in-out 0s infinite both;
+          animation: cube_move 30s ease-in-out 0s infinite both;
+}
+main .cubes .cube_1 {
+  width: 5rem;
+  height: 5.75rem;
+  top: 15rem;
+  right: 15rem;
+}
+main .cubes .cube_2 {
+  width: 8rem;
+  height: 9.25rem;
+  top: 15rem;
+  right: 3rem;
+}
+main .cubes .cube_3 {
+  width: 11rem;
+  height: 13rem;
+  top: 2.25rem;
+  right: 7rem;
+}
+@-webkit-keyframes cube_move {
+  25% {
+    transform: translateY(3vh);
+  }
+  75% {
+    transform: translateY(-3vh);
+  }
+}
+@keyframes cube_move {
+  25% {
+    transform: translateY(3vh);
+  }
+  75% {
+    transform: translateY(-3vh);
+  }
+}/*# sourceMappingURL=home.css.map */
