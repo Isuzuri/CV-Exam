@@ -246,11 +246,11 @@ main .learn__list .list__card__description {
     margin-left: 0;
     flex-direction: row;
   }
-  .grid aside span {
+  .grid aside nav span {
     top: -0.5rem;
     left: 0;
   }
-  .grid #touch {
+  .grid aside #touch {
     margin-bottom: 1rem;
   }
 }/*# sourceMappingURL=home.css.map */
