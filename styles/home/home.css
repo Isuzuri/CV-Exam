@@ -22,21 +22,21 @@ main .header {
   height: 22rem;
   position: relative;
 }
-main .header .header__text {
+main .header__text {
   width: 50%;
 }
-main .header .header__text .header__title {
+main .header__text .header__title {
   font-weight: 600;
   font-size: 3rem;
   line-height: 3.6rem;
   color: #094067;
 }
-main .header .header__text .header__subtitle {
+main .header__text .header__subtitle {
   margin-top: 2.25rem;
   line-height: 1.5rem;
   color: #5F6C7B;
 }
-main .header .header__text .header__subtitle_strong {
+main .header__text .header__subtitle_strong {
   font-weight: 600;
 }
 main .header .header__cubes > * {
@@ -166,4 +166,91 @@ main .learn__list .list__card__description {
   margin-top: 1rem;
   grid-area: description;
   color: #5F6C7B;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+  .grid {
+    grid-template-columns: 340px 1fr;
+  }
+  .grid aside {
+    width: 340px;
+  }
+  main .header {
+    height: auto;
+  }
+  main .header__text {
+    width: 100%;
+  }
+  main .header__cubes {
+    opacity: 0.2;
+  }
+  main .achievement {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main .achievement__block {
+    width: 45%;
+  }
+  main .learn__list .list__card {
+    width: 48%;
+  }
+}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 200px 1fr;
+  }
+  .grid aside {
+    width: 200px;
+  }
+  .grid aside nav {
+    flex-direction: column;
+    gap: 0;
+    margin-left: 1rem;
+    align-items: start;
+  }
+  .grid aside nav span {
+    top: 2.4rem;
+    left: 5rem;
+  }
+}
+@media (max-width: 750px) {
+  main .header__text .header__title {
+    font-size: 2.5rem;
+  }
+  main .achievement__block {
+    width: 100%;
+  }
+  main .learn__list .list__card {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid aside {
+    position: relative;
+    height: auto;
+    width: 100%;
+    gap: 2rem;
+  }
+  .grid aside .head {
+    margin-top: 2rem;
+  }
+  .grid aside nav {
+    margin-left: 0;
+    flex-direction: row;
+  }
+  .grid aside span {
+    top: -0.5rem;
+    left: 0;
+  }
+  .grid #touch {
+    margin-bottom: 1rem;
+  }
 }/*# sourceMappingURL=home.css.map */

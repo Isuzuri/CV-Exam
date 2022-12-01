@@ -33,7 +33,7 @@ main {
     height: 22rem;
     position: relative;
 
-    .header__text {
+    &__text {
       width: 50%;
   
       .header__title {
@@ -214,4 +214,128 @@ main {
   }
 }
   
-  
+//=========Adaptive============
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 340px 1fr;
+
+    aside {
+      width: 340px;
+    }
+  }
+
+  main {
+    .header {
+      height: auto;
+
+      &__text {
+        width: 100%;
+      }
+    
+      &__cubes  {
+        opacity: 0.2;
+      }
+    }
+
+    .achievement {
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &__block {
+        width: 45%;
+      }
+    }
+
+    .learn {
+      &__list {
+        .list__card {
+          width: 48%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 200px 1fr;
+
+    aside {
+      width: 200px;
+      nav {
+        flex-direction: column;
+        gap: 0;
+        margin-left: 1rem;
+        align-items: start;
+
+        span {
+          top: 2.4rem;
+          left: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    .header{
+      &__text {
+        .header__title {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .achievement {
+      &__block {
+        width: 100%;
+      }
+    }
+
+    .learn {
+      &__list {
+        .list__card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+
+    aside {
+      position: relative;
+      height: auto;
+      width: 100%;
+      gap: 2rem;
+
+      .head {
+        margin-top: 2rem;
+      }
+      nav {
+        margin-left: 0;
+        flex-direction: row;
+      }
+
+        span {
+          top: -0.5rem;
+          left: 0;
+        }
+      }
+
+      #touch {
+        margin-bottom: 1rem;
+      }
+    }
+  }
