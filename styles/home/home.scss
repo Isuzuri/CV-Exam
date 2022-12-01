@@ -115,6 +115,13 @@ main {
     grid-area: img;
   }
 
+  &__title, &__progress {
+    margin-right: 1rem;
+    text-align: end;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+
   &__title {
     grid-area: title;
     color: #094067;
@@ -124,12 +131,6 @@ main {
     grid-area: progress;
     font-size: 2.25rem;
     color: #5F6C7B;
-  }
-
-  &__title, &__progress {
-    text-align: end;
-    font-weight: 700;
-    line-height: 1.5rem;
   }
 
   }

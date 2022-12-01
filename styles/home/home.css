@@ -91,6 +91,12 @@ main .achievement__block .star {
 main .achievement__image {
   grid-area: img;
 }
+main .achievement__title, main .achievement__progress {
+  margin-right: 1rem;
+  text-align: end;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
 main .achievement__title {
   grid-area: title;
   color: #094067;
@@ -99,11 +105,6 @@ main .achievement__progress {
   grid-area: progress;
   font-size: 2.25rem;
   color: #5F6C7B;
-}
-main .achievement__title, main .achievement__progress {
-  text-align: end;
-  font-weight: 700;
-  line-height: 1.5rem;
 }
 main .learn__title {
   margin: 2.75rem 0;
