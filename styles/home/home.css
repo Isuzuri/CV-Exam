@@ -6,50 +6,163 @@
   background-color: rgb(9, 64, 103);
 }
 
+main .achievement__block .star, main .achievement__block .clock, main .achievement__block .heart, main .learn__list .list__card__image {
+  width: 4rem;
+  height: 4rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 main {
   position: relative;
+  padding: 3rem;
   background-color: white;
-  height: 4000px;
 }
-main .cubes > * {
+main .header {
+  height: 22rem;
+  position: relative;
+}
+main .header .header__text {
+  width: 50%;
+}
+main .header .header__text .header__title {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.6rem;
+  color: #094067;
+}
+main .header .header__text .header__subtitle {
+  margin-top: 2.25rem;
+  line-height: 1.5rem;
+  color: #5F6C7B;
+}
+main .header .header__text .header__subtitle_strong {
+  font-weight: 600;
+}
+main .header .header__cubes > * {
   position: absolute;
   background-image: url(../../icons/cubic.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-animation: cube_move 30s ease-in-out 0s infinite both;
-          animation: cube_move 30s ease-in-out 0s infinite both;
 }
-main .cubes .cube_1 {
+main .header .header__cubes .cubes__cube_1 {
   width: 5rem;
   height: 5.75rem;
-  top: 15rem;
+  top: 10rem;
   right: 15rem;
 }
-main .cubes .cube_2 {
+main .header .header__cubes .cubes__cube_2 {
   width: 8rem;
   height: 9.25rem;
-  top: 15rem;
+  top: 10rem;
   right: 3rem;
 }
-main .cubes .cube_3 {
+main .header .header__cubes .cubes__cube_3 {
   width: 11rem;
   height: 13rem;
-  top: 2.25rem;
+  top: -2rem;
   right: 7rem;
 }
-@-webkit-keyframes cube_move {
-  25% {
-    transform: translateY(3vh);
-  }
-  75% {
-    transform: translateY(-3vh);
-  }
+main .achievement {
+  display: flex;
+  gap: 2vw;
 }
-@keyframes cube_move {
-  25% {
-    transform: translateY(3vh);
-  }
-  75% {
-    transform: translateY(-3vh);
-  }
+main .achievement__block {
+  width: 30%;
+  position: relative;
+  padding: 1rem 0.75rem;
+  box-shadow: 0px 0px 10px rgba(61, 169, 252, 0.5);
+  border-radius: 12px;
+  display: grid;
+  grid-template-areas: "img title" "img progress";
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  justify-content: center;
+}
+main .achievement__block .heart {
+  background-image: url(../../icons/heart.svg);
+}
+main .achievement__block .clock {
+  background-image: url(../../icons/clock.svg);
+}
+main .achievement__block .star {
+  background-image: url(../../icons/star.svg);
+}
+main .achievement__image {
+  grid-area: img;
+}
+main .achievement__title {
+  grid-area: title;
+  color: #094067;
+}
+main .achievement__progress {
+  grid-area: progress;
+  font-size: 2.25rem;
+  color: #5F6C7B;
+}
+main .achievement__title, main .achievement__progress {
+  text-align: end;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+main .learn__title {
+  margin: 2.75rem 0;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.5rem;
+  color: #094067;
+}
+main .learn__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.25rem;
+}
+main .learn__list .list__card {
+  width: 31%;
+  display: grid;
+  grid-template-areas: "image title" "description description";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 64px 1fr;
+  justify-content: center;
+  justify-items: center;
+  padding: 2rem;
+  border: 2px solid #3DA9FC;
+  border-radius: 12px;
+}
+main .learn__list .list__card__image {
+  position: relative;
+  grid-area: image;
+  background-size: contain;
+}
+main .learn__list .list__card .html {
+  background-image: url(../../icons/learn/html.svg);
+}
+main .learn__list .list__card .css {
+  background-image: url(../../icons/learn/css.svg);
+  transform: scale(0.9);
+}
+main .learn__list .list__card .javascript {
+  background-image: url(../../icons/learn/javascript.svg);
+}
+main .learn__list .list__card .angular {
+  background-image: url(../../icons/learn/angular.svg);
+}
+main .learn__list .list__card .react {
+  background-image: url(../../icons/learn/react.svg);
+}
+main .learn__list .list__card__title, main .learn__list .list__card__description {
+  line-height: 1.5rem;
+}
+main .learn__list .list__card__title {
+  grid-area: title;
+  align-self: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #094067;
+}
+main .learn__list .list__card__description {
+  margin-top: 1rem;
+  grid-area: description;
+  color: #5F6C7B;
 }/*# sourceMappingURL=home.css.map */

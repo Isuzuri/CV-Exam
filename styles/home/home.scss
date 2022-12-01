@@ -1,58 +1,216 @@
 // Выделение активной страницы
 
 .home-title span {
-    opacity: 1;
+  opacity: 1;
 }
 
 .col1 a {
-    background-color: rgb(9,64,103);
+  background-color: rgb(9,64,103);
 }
 
 // ===================================
 @mixin cube_size_pos ($width, $height, $top, $right) {
-    width: $width;
-    height: $height;
-    top: $top;
-    right: $right;
+  width: $width;
+  height: $height;
+  top: $top;
+  right: $right;
+}
+
+%achievement__bgimg, %learn__list__bgimg {
+  width: 4rem;
+  height: 4rem;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 // ===================================
 main {
-    position: relative;
-    background-color: white;
-    height: 4000px;
+  position: relative;
+  padding: 3rem;
+  background-color: white;
 
-    .cubes {
-        > * {
-            position: absolute;
-            background-image: url(../../icons/cubic.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            animation: cube_move 30s ease-in-out 0s infinite both;
-          }
-          
-          .cube_1 {
-            @include cube_size_pos(5rem, 5.75rem, 15rem, 15rem);
-          }
-            
-          .cube_2 {
-            @include cube_size_pos(8rem, 9.25rem, 15rem, 3rem);
-          }
-          
-          .cube_3 {
-            @include cube_size_pos(11rem, 13rem, 2.25rem, 7rem);
-          }
-        
-          @keyframes cube_move {
-            25% {
-              transform: translateY(3vh);
-            }
-                    
-            75% {
-              transform: translateY(-3vh);
-            }
-          }
+  .header {
+    height: 22rem;
+    position: relative;
+
+    .header__text {
+      width: 50%;
+  
+      .header__title {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        color: #094067;
+      }
+  
+      .header__subtitle {
+        margin-top: 2.25rem;
+        line-height: 1.5rem;
+        color: #5F6C7B;
+  
+        &_strong {
+          font-weight: 600;
+        }
+      }
     }
+
+    .header__cubes {
+      > * {
+          position: absolute;
+          background-image: url(../../icons/cubic.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        
+        .cubes__cube_1 {
+          @include cube_size_pos(5rem, 5.75rem, 10rem, 15rem);
+        }
+          
+        .cubes__cube_2 {
+          @include cube_size_pos(8rem, 9.25rem, 10rem, 3rem);
+        }
+        
+        .cubes__cube_3 {
+          @include cube_size_pos(11rem, 13rem, -2rem, 7rem);
+        }
+    }
+  }
+
+
+  .achievement {
+    display: flex;
+    gap: 2vw;
+
+    &__block {
+      width: 30%;
+      position: relative;
+      padding: 1rem 0.75rem;
+      box-shadow: 0px 0px 10px rgba(61, 169, 252, 0.5);
+      border-radius: 12px;
+      display: grid;
+      grid-template-areas: 
+                          'img title' 
+                          'img progress';
+      grid-template-columns: 1fr 3fr;
+      align-items: center;
+      justify-content: center;
+
+      .heart {
+        background-image: url(../../icons/heart.svg);
+        @extend %achievement__bgimg;
+      }
+
+      .clock {
+        background-image: url(../../icons/clock.svg);
+        @extend %achievement__bgimg;
+      }
+
+      .star {
+        background-image: url(../../icons/star.svg);
+        @extend %achievement__bgimg;
+      }
+    }
+
+  &__image {
+    grid-area: img;
+  }
+
+  &__title {
+    grid-area: title;
+    color: #094067;
+  }
+
+  &__progress {
+    grid-area: progress;
+    font-size: 2.25rem;
+    color: #5F6C7B;
+  }
+
+  &__title, &__progress {
+    text-align: end;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+
+  }
+
+  .learn {
+    &__title {
+      margin: 2.75rem 0;
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 1.5rem;
+      color: #094067;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 1.25rem;
+
+      .list__card {
+        width: 31%;
+        display: grid;
+        grid-template-areas: 
+                            'image title'
+                            'description description';
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 64px 1fr;
+        justify-content: center;
+        justify-items: center;
+        padding: 2rem;
+        border: 2px solid #3DA9FC;
+        border-radius: 12px;
+
+        &__image {
+          position: relative;
+          grid-area: image;
+          @extend %learn__list__bgimg;
+          background-size: contain;
+        }
+
+        .html {
+          background-image: url(../../icons/learn/html.svg);
+        }
+
+        .css {
+          background-image: url(../../icons/learn/css.svg);
+          transform: scale(0.9);
+        }
+
+        .javascript {
+          background-image: url(../../icons/learn/javascript.svg);
+        }
+
+        .angular {
+          background-image: url(../../icons/learn/angular.svg);
+        }
+
+        .react {
+          background-image: url(../../icons/learn/react.svg);
+        }
+
+        &__title, &__description {
+          line-height: 1.5rem;
+        }
+
+        &__title {
+          grid-area: title;
+          align-self: center;
+          font-weight: 600;
+          font-size: 1.25rem;
+          color: #094067;
+        }
+
+        &__description {
+          margin-top: 1rem;
+          grid-area: description;
+          color: #5F6C7B;   
+        }
+      }
+    }
+  }
 }
   
   
