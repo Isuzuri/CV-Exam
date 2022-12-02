@@ -29,7 +29,6 @@ body {
         top: 0;
         width: 380px;
         height: 100vh;
-        background-color: rgba(61,169,252, 0.5);
     }
 }
 // ====================================
@@ -189,5 +188,45 @@ aside {
             background-color: white;
             color: black;
         }
+    }
+}
+
+// ===========================
+
+@media (max-width: 1200px) {
+    html {
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 340px 1fr;
+
+    aside {
+      width: 340px;
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .grid {
+      grid-template-columns: 200px 1fr;
+  
+      aside {
+        width: 200px;
+        nav {
+          flex-wrap: wrap;
+          
+          > div {
+            width: 30%;
+          }
+        }
+      }
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
     }
 }

@@ -169,15 +169,6 @@ main .learn__list .list__card__description {
 }
 
 @media (max-width: 1200px) {
-  html {
-    font-size: 14px;
-  }
-  .grid {
-    grid-template-columns: 340px 1fr;
-  }
-  .grid aside {
-    width: 340px;
-  }
   main .header {
     height: auto;
   }
@@ -199,24 +190,6 @@ main .learn__list .list__card__description {
     width: 48%;
   }
 }
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 200px 1fr;
-  }
-  .grid aside {
-    width: 200px;
-  }
-  .grid aside nav {
-    flex-direction: column;
-    gap: 0;
-    margin-left: 1rem;
-    align-items: start;
-  }
-  .grid aside nav span {
-    top: 2.4rem;
-    left: 5rem;
-  }
-}
 @media (max-width: 750px) {
   main .header__text .header__title {
     font-size: 2.5rem;
@@ -229,10 +202,6 @@ main .learn__list .list__card__description {
   }
 }
 @media (max-width: 600px) {
-  .grid {
-    display: flex;
-    flex-direction: column;
-  }
   .grid aside {
     position: relative;
     height: auto;

@@ -11,6 +11,7 @@ body {
   font-family: Lato;
   background-image: url(../../images/bg.jpg);
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .grid {
@@ -26,7 +27,6 @@ body {
   top: 0;
   width: 380px;
   height: 100vh;
-  background-color: rgba(61, 169, 252, 0.5);
 }
 
 aside .head {
@@ -153,4 +153,36 @@ aside #touch {
 aside #touch:hover {
   background-color: white;
   color: black;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+  .grid {
+    grid-template-columns: 340px 1fr;
+  }
+  .grid aside {
+    width: 340px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .grid {
+    grid-template-columns: 200px 1fr;
+  }
+  .grid aside {
+    width: 200px;
+  }
+  .grid aside nav {
+    flex-wrap: wrap;
+  }
+  .grid aside nav > div {
+    width: 30%;
+  }
+}
+@media (max-width: 600px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=sidebar.css.map */
