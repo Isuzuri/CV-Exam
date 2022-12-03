@@ -1,1 +1,158 @@
-/*# sourceMappingURL=resume.css.map */
+.education-title span {
+  opacity: 1;
+}
+
+.col2 a {
+  background-color: rgb(9, 64, 103);
+}
+
+.header {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.header__text .header__title {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.6rem;
+  color: #094067;
+}
+.header__text .header__subtitle {
+  margin-top: 0.5rem;
+  line-height: 1.5rem;
+  color: #5F6C7B;
+}
+
+.grid_wrap {
+  display: grid;
+  grid-template-areas: "edu coding" "exp soft";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2.25rem;
+}
+.grid_wrap .education {
+  grid-area: edu;
+}
+.grid_wrap .exp {
+  grid-area: exp;
+}
+.grid_wrap .coding {
+  grid-area: coding;
+}
+.grid_wrap .soft {
+  grid-area: soft;
+}
+.grid_wrap hr {
+  border: 1px solid #90B4CE;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  margin: 0.5rem 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #094067;
+}
+
+.education .flex-wrap, .exp .flex-wrap {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+.education .time, .exp .time {
+  display: flex;
+  flex-shrink: 0;
+  width: 150px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.education .time .year, .exp .time .year {
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+.education .time .name, .exp .time .name {
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+  color: #5F6C7B;
+}
+.education .timeline, .exp .timeline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.education .timeline .line, .exp .timeline .line {
+  width: 1px;
+  height: 12rem;
+  background-color: #90B4CE;
+}
+.education .timeline .circle, .exp .timeline .circle {
+  position: absolute;
+  top: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(../../icons/resume/circle_on_line.svg);
+  background-size: cover;
+}
+.education .desc .spec, .exp .desc .spec {
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+}
+.education .desc .spec_desc, .exp .desc .spec_desc {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  color: #5F6C7B;
+}
+
+.coding__list {
+  display: flex;
+  flex-direction: column;
+}
+.coding__list__lang {
+  margin-bottom: 0.75rem;
+}
+.coding__list__lang .lang_per {
+  display: flex;
+  justify-content: space-between;
+}
+.coding__list__lang .bar {
+  position: relative;
+  margin-top: 0.5rem;
+}
+.coding__list__lang .bar > * {
+  height: 0.75rem;
+  border-radius: 50px;
+}
+.coding__list__lang .bar .back {
+  width: 100%;
+  background-color: #094067;
+}
+.coding__list__lang .bar .front {
+  position: absolute;
+  top: 0;
+  background: #3DA9FC;
+}
+.coding__list__lang .bar .html_css {
+  width: 95%;
+}
+.coding__list__lang .bar .js {
+  width: 70%;
+}
+.coding__list__lang .bar .angular {
+  width: 56%;
+}
+.coding__list__lang .bar .react {
+  width: 73%;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.skills span {
+  padding: 0.25rem 0.75rem;
+  background: #3DA9FC;
+  border-radius: 500px;
+  color: white;
+}/*# sourceMappingURL=resume.css.map */

@@ -18,6 +18,11 @@ body {
   display: grid;
   grid-template-columns: 380px 1fr;
 }
+.grid main {
+  position: relative;
+  padding: 3rem;
+  background-color: white;
+}
 .grid aside {
   display: flex;
   flex-direction: column;

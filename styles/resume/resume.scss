@@ -1,0 +1,200 @@
+// Выделение активной страницы
+
+.education-title span {
+  opacity: 1;
+}
+
+.col2 a {
+  background-color: rgb(9,64,103);
+}
+
+// ===================================
+
+.header {
+    position: relative;
+    margin-bottom: 3rem;
+
+    &__text {
+  
+      .header__title {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        color: #094067;
+      }
+  
+      .header__subtitle {
+        margin-top: 0.5rem;
+        line-height: 1.5rem;
+        color: #5F6C7B;
+        }
+    }
+}
+
+.grid_wrap {
+    display: grid;
+    grid-template-areas: 
+                        'edu coding'
+                        'exp soft';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2.25rem;
+    
+    .education {
+        grid-area: edu;
+    }
+
+    .exp {
+        grid-area: exp;
+    }
+
+    .coding {
+        grid-area: coding;
+    }
+
+    .soft {
+        grid-area: soft;
+    }
+
+    hr {
+        border: 1px solid #90B4CE;
+        margin-bottom: 1.5rem;
+}
+}
+
+.title {
+    margin: 0.5rem 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: #094067;
+}
+
+
+
+.education, .exp {
+    .flex-wrap {
+        position: relative;
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .time {
+        display: flex;
+        flex-shrink: 0;
+        width: 150px;
+        flex-direction: column;
+        align-items: flex-end;
+    
+        .year {
+            font-weight: 700;
+            line-height: 1.25rem;
+        }
+    
+        .name {
+            font-size: 0.8rem;
+            line-height: 1.25rem;
+            color: #5F6C7B;
+        }
+    }
+    
+    .timeline {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        .line {
+            width: 1px;
+            height: 12rem;
+            background-color: #90B4CE;
+        }
+        .circle {
+            position: absolute;
+            top: 0.25rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            background-image: url(../../icons/resume/circle_on_line.svg);
+            background-size: cover;
+        }
+    }
+    
+    .desc {
+        .spec {
+            font-size: 0.9rem;
+            line-height: 1.25rem;
+        }
+    
+        .spec_desc {
+            font-size: 0.8rem;
+            line-height: 1.5rem;
+            color: #5F6C7B;
+        }
+    }
+}
+
+.coding {
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        &__lang {
+            margin-bottom: 0.75rem;
+
+            .lang_per {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .bar {
+                position: relative;
+                margin-top: 0.5rem;
+
+                > * {
+                    height: 0.75rem;
+                    border-radius: 50px;
+                }
+
+                .back {
+                    width: 100%;
+                    background-color: #094067;
+                }
+
+                .front {
+                    position: absolute;
+                    top: 0;
+                    background: #3DA9FC;
+                }
+
+                .html_css {
+                    width: 95%;
+                }
+
+                .js {
+                    width: 70%;
+                }
+
+                .angular {
+                    width: 56%;
+                }
+
+                .react {
+                    width: 73%;
+                }
+            }
+        }
+    }
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+
+    span {
+        padding: 0.25rem 0.75rem;
+        background: #3DA9FC;
+        border-radius: 500px;
+        color: white;
+    }
+}

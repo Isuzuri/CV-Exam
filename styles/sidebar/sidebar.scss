@@ -21,6 +21,12 @@ body {
     display: grid;
     grid-template-columns: 380px 1fr;
 
+    main {
+        position: relative;
+        padding: 3rem;
+        background-color: white;
+    }
+
     aside {
         display: flex;
         flex-direction: column;

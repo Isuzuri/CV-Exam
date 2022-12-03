@@ -13,11 +13,6 @@ main .achievement__block .star, main .achievement__block .clock, main .achieveme
   background-size: cover;
 }
 
-main {
-  position: relative;
-  padding: 3rem;
-  background-color: white;
-}
 main .header {
   height: 22rem;
   position: relative;
