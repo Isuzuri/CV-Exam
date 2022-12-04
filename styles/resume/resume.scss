@@ -82,7 +82,7 @@
     .time {
         display: flex;
         flex-shrink: 0;
-        width: 150px;
+        width: 130px;
         flex-direction: column;
         align-items: flex-end;
     
@@ -196,5 +196,20 @@
         background: #3DA9FC;
         border-radius: 500px;
         color: white;
+    }
+}
+
+//=============Adaptive=================
+
+@media (max-width: 1000px) {
+    .grid_wrap {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600) {
+    .main {
+        padding: 1rem;
     }
 }
