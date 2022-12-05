@@ -159,15 +159,12 @@
 
 @media (max-width: 1000px) {
   .grid_wrap {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 }
-
 @media (max-width: 600) {
   .main {
-      padding: 1rem;
+    padding: 1rem;
   }
-}
-
-/*# sourceMappingURL=resume.css.map */
+}/*# sourceMappingURL=resume.css.map */

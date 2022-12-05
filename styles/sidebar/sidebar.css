@@ -190,28 +190,23 @@ aside #touch:hover {
     display: flex;
     flex-direction: column;
   }
-
   .grid aside {
     position: relative;
     height: auto;
     width: 100%;
     gap: 2rem;
   }
-
   .grid aside .head {
     margin-top: 2rem;
   }
-
   .grid aside nav {
     margin-left: 0;
     flex-direction: row;
   }
-
   .grid aside nav span {
     top: -0.5rem;
     left: 0;
   }
-
   .grid aside #touch {
     margin-bottom: 1rem;
   }
