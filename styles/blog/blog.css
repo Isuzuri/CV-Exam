@@ -1,8 +1,8 @@
-.portfolio-title span {
+.blog-title span {
   opacity: 1;
 }
 
-.col3 a {
+.col4 a {
   background-color: rgb(9, 64, 103);
 }
 
@@ -36,56 +36,55 @@
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.5s ease, border 0.5s ease;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
 }
 .card-wrap .card__bg {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
-.card-wrap .card__bg .filter {
-  width: 100%;
-  height: 100%;
-  background: rgba(9, 64, 103, 0.5);
-  transition: background-color 0.5s ease;
+.card-wrap .card .cssninja {
+  background-image: url(../../images/blog/cssninja.png);
 }
-.card-wrap .card .kanban {
-  background-image: url(../../images/portfolio/Kanban.jpg);
+.card-wrap .card .frontend {
+  background-image: url(../../images/blog/Frontend.png);
 }
-.card-wrap .card .mail {
-  background-image: url(../../images/portfolio/Mail.png);
-}
-.card-wrap .card__title {
+.card-wrap .card__desc {
   position: absolute;
-  left: 1rem;
-  bottom: 1.5rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1.25rem 1rem;
+  background-color: white;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
 }
-.card-wrap .card__title span {
-  background-color: #3DA9FC;
-  padding: 0.5rem 1rem;
+.card-wrap .card__desc__data {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  color: #5F6C7B;
+}
+.card-wrap .card__desc__title {
+  margin-top: 1rem;
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  border-radius: 30px;
-  color: white;
+  color: #094067;
 }
-.card-wrap .card__tag {
+.card-wrap .card__tag, .card-wrap .card__lang {
   position: absolute;
   top: 1.5rem;
-  right: 1rem;
   padding: 0.25rem 0.75rem;
   background: #3DA9FC;
   border-radius: 500px;
   color: white;
 }
-.card-wrap .card__page {
-  position: absolute;
+.card-wrap .card__tag {
   right: 1rem;
-  bottom: 1rem;
 }
-.card-wrap .card__page a {
-  color: white;
-  cursor: alias;
+.card-wrap .card__lang {
+  left: 1rem;
 }
 .card-wrap .card:hover {
   transform: scale(1.1);
@@ -99,4 +98,4 @@
   .card-wrap .card {
     width: 100%;
   }
-}/*# sourceMappingURL=portfolio.css.map */
+}/*# sourceMappingURL=blog.css.map */

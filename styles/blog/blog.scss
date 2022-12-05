@@ -1,10 +1,10 @@
 // Выделение активной страницы
 
-.portfolio-title span {
+.blog-title span {
     opacity: 1;
   }
   
-  .col3 a {
+  .col4 a {
     background-color: rgb(9,64,103);
   }
   
@@ -45,64 +45,63 @@
         border-radius: 12px;
         overflow: hidden;
         transition: transform 0.5s ease, border 0.5s ease;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
 
         &__bg {
             width: 100%;
             height: 100%;
             background-repeat: no-repeat;
             background-size: cover;
-
-            .filter {
-                width: 100%;
-                height: 100%;
-                background: rgba(9, 64, 103, 0.5);
-                transition: background-color 0.5s ease;
-            }
+            background-position: center;
+        }
+        
+        .cssninja {
+            background-image: url(../../images/blog/cssninja.png);
         }
 
-        .kanban {
-            background-image: url(../../images/portfolio/Kanban.jpg);
+        .frontend {
+            background-image: url(../../images/blog/Frontend.png);
         }
 
-        .mail {
-            background-image: url(../../images/portfolio/Mail.png);
-        }
-
-        &__title {
+        &__desc {
             position: absolute;
-            left: 1rem;
-            bottom: 1.5rem;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 1.25rem 1rem;
+            background-color: white;
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
 
-            span {
-                background-color: #3DA9FC;
-                padding: 0.5rem 1rem;
+            &__data {
+                font-size: 0.8rem;
+                line-height: 1.1rem;
+                color: #5F6C7B;
+            }
+
+            &__title {
+                margin-top: 1rem;
                 font-weight: 600;
                 font-size: 1.25rem;
                 line-height: 1.5rem;
-                border-radius: 30px;
-                color: white;
+                color: #094067;
             }
-        }      
+        }
 
-        &__tag {
+        &__tag, &__lang {
             position: absolute;
             top: 1.5rem;
-            right: 1rem;
             padding: 0.25rem 0.75rem;
             background: #3DA9FC;
             border-radius: 500px;
             color: white;
         }
 
-        &__page {
-            position: absolute;
+        &__tag {
             right: 1rem;
-            bottom: 1rem;
+        }
 
-            a {
-                color: white;
-                cursor: alias;
-            }
+        &__lang {
+            left: 1rem;
         }
 
         &:hover {
@@ -116,7 +115,7 @@
     }
 }
 
-//================Adaptive=====================
+//==================Adaptive===================
 
 @media (max-width: 1050px) {
     .card-wrap {
