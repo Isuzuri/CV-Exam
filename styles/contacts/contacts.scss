@@ -1,0 +1,145 @@
+// Выделение активной страницы
+
+.contacts-title span {
+    opacity: 1;
+  }
+  
+  .col5 a {
+    background-color: rgb(9,64,103);
+  }
+  
+  // ===================================
+  
+.header {
+    position: relative;
+    margin-bottom: 3rem;
+
+    &__text {
+  
+      .header__title {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        color: #094067;
+      }
+  
+      .header__subtitle {
+        margin-top: 0.5rem;
+        line-height: 1.5rem;
+        color: #5F6C7B;
+        }
+    }
+}
+
+.contacts {
+    display: flex;
+    gap: 3rem;
+    cursor: default;
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 33%;
+        padding: 1rem 0.5rem;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+
+        .icon {
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 0.75rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .phone__icon {
+            background-image: url(../../icons/contacts/phone.svg);
+        }
+
+        .location__icon {
+            background-image: url(../../icons/contacts/location.svg);
+        }
+
+        .email__icon {
+            background-image: url(../../icons/contacts/email.svg);
+        }
+    }
+}
+
+.mail-form {
+    margin-top: 3rem;
+
+    .name, .mail, .message {
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(95, 108, 123, 0.5);
+        border-radius: 4px;
+    }
+    
+    .name::placeholder, .mail::placeholder, .message::placeholder {
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        color: rgba(95, 108, 123, 0.5);
+    }
+
+    .flex-wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 2.5rem;
+
+        > * {
+            width: 50%;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        margin-top: 1.5rem;
+        resize: none;
+    }
+
+    input[type="submit"]{
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        margin: 1rem auto;
+        padding: 1rem;
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        background: #3DA9FC;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+//==================Adaptive===================
+
+@media (max-width: 1000px) {
+    .contacts {
+        flex-direction: column;
+
+       > div {
+        width: 100%;
+       } 
+
+       
+    }
+}
+
+@media (max-width: 600px) {
+    .mail-form {
+        .flex-wrap {
+            flex-direction: column;
+            gap: 1rem;
+            
+            > * {
+                width: 100%;
+            }
+        }
+    }
+}

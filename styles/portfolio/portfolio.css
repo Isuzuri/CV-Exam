@@ -26,16 +26,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  cursor: pointer;
 }
 .card-wrap .card {
   position: relative;
-  width: 45%;
+  width: 46%;
   height: 30vh;
   min-width: 30vh;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.5s ease, border 0.5s ease;
+  cursor: pointer;
 }
 .card-wrap .card__bg {
   width: 100%;
