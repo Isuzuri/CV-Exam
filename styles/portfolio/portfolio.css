@@ -59,6 +59,12 @@
 .card-wrap .card .bank {
   background-image: url(../../images/portfolio/Bank.png);
 }
+.card-wrap .card .regform {
+  background-image: url(../../images/portfolio/Regform.png);
+}
+.card-wrap .card .inputlibrary {
+  background-image: url(../../images/portfolio/Input-lib.png);
+}
 .card-wrap .card__title {
   position: absolute;
   left: 1rem;
